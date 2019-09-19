@@ -21,3 +21,7 @@ def utc_to_local(utc_time_str, utc_format='%Y-%m-%dT%H:%M:%S.%fZ'):
     local_dt = utc_dt.replace(tzinfo=utc).astimezone(local_tz)
     time_str = local_dt.strftime(local_format)
     return datetime.datetime.fromtimestamp(int(time.mktime(time.strptime(time_str, local_format))))
+
+
+if __name__ == '__main__':
+    print()
